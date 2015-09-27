@@ -1,0 +1,49 @@
+---
+title: "code book for subject_averages"
+author: "suresh joshi"
+date: "September 27, 2015"
+output: html_document
+---
+
+ A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. 
+ This repo explains how all of the scripts work and how they are connected.
+
+This is a Coursera Project for "Getting and Cleaning Data Course". This project is using Human Activity Recognition Using Smartphones Dataset.
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a 
+ smartphone (Samsung Galaxy S II) on the waist. 
+Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then 
+ sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). 
+The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter 
+ into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter
+  with 0.3 Hz cutoff frequency was used.
+From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
+See 'features_info.txt' file found in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip for more details. 
+
+Here are the data for the project:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+This project takes the dataset found in above zip file does the following analysis (using script run_analysis.R)
+    1) Merges the training and the test sets to create one data set.
+    2) Extracts only the measurements on the mean and standard deviation for each measurement. 
+    3) creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    
+Pre-requisite to execute run_analysis.R:
+  Download and unzip the source dataset https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip in 
+  your working directory.
+
+
+The dataset includes the following files:
+=========================================
+- 'README.Rmd'
+- 'CodeBook.Rmd': Shows information about the variables used in the analysis
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'run_analysis.R' : The R script to produce output file subject_averages.txt 
+- 'subject_averages.txt': mean of the variables(listed in CodeBook) grouped by subject and activity.
+
+
+
+
+ 
